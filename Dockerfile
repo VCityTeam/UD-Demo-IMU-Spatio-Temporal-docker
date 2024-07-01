@@ -16,12 +16,6 @@ RUN npm --version
 RUN apt-get install -y git
 RUN git --version
 
-RUN git clone https://github.com/VCityTeam/UD-Viz.git
-WORKDIR UD-Viz
-RUN git checkout 7c79f93
-RUN npm i
-WORKDIR /
-
 RUN git clone https://github.com/VCityTeam/UD-Demo-IMU-Spatio-Temporal.git
 WORKDIR UD-Demo-IMU-Spatio-Temporal
 RUN npm i
