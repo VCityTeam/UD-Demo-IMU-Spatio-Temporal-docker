@@ -18,6 +18,8 @@ RUN git --version
 
 RUN git clone https://github.com/VCityTeam/UD-Demo-IMU-Spatio-Temporal.git
 WORKDIR UD-Demo-IMU-Spatio-Temporal
+ARG checkoutName=master
+RUN git checkout $checkoutName
 RUN npm i
 RUN npm run debug
 
